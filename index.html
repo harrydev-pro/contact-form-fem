@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<div class="container">
+      <dialog id="toast">
+    <h3><img src="/assets/images/icon-success-check.svg" alt="">message sent</h3>
+    <p>thanks for completing the form. we'll be in touch soon!</p>
+  </dialog>
+        <h1>Contact Us</h1>
+        <form id="contact-form" type="submit" method="post" action="#">
+        <div class="name-group">
+<div class="fname">
+  <label for="first-name">First Name*</label><br>
+  <input type="text" id="first-name" name="first-name" >
+  <span class="error-message" id="first-name-error">First name is required</span>
+  </div>
+<div class="lname">
+  <label for="last-name">Last Name*</label>
+  <br>
+  <input type="text" id="last-name" name="last-name" >
+  <span class="error-message" id="last-name-error">Last name is required</span>
+  </div>
+</div>
+      <div class="mail-group">
+        <label for="email">Email*</label><br>
+        <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" >  
+        <span class="error-message" id="email-error">Please enter a valid email address</span>
+      </div>
+      <div class="query-form">
+        <label for="query">Your Query*</label><br>
+<div class="query">
+<div class="general">
+       <fieldset id="querytype"><input type="radio" name="query-type"  id="general" value="general">general enquiry</fieldset> 
+        <fieldset id="querytype"><input type="radio" name="query-type" id="support" value="support">support request</fieldset>
+        </div>
+        <span class="error-message" id="query-error">Query is required</span>
+      </div>
+      <div class="message-group">
+        <label for="message">Message*</label><br>
+        <textarea  id="message-text" name="message" rows="5"></textarea>
+        <span class="error-message" id="message-error">Message is required</span>
+      </div>
+      <div class="checkbox-group">
+        <div class="consent">
+        <input type="checkbox" id="terms" name="terms">
+        <label for="terms">I agree to the terms and conditions*</label>
+           </div>
+           <span class="error-message" id="terms-error">You must agree to the terms and conditions</span> 
+      </div>
+      <button onclick="showwork()" type="submit" id="submit-button">Submit</button> 
+        </form>
+   <script src="main.js"></script> 
+  
+</body>
+</html>
