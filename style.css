@@ -174,7 +174,7 @@ button:hover{
 
 @media screen and (max-width: 375px) {
     .container {
-        width: 310px;
+        width: 290px;
         padding: 20px;
       background-color: white;
         border-radius: 10px;
@@ -241,7 +241,7 @@ span.error-message{
     margin-bottom:15px;
     border:1px solid black;
     border-radius:5px;
-    width: 290px;;
+    width: 265px;;
 }
 .general fieldset input{
     accent-color:hsl(169, 82%, 27%);
